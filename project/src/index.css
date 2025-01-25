@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.psv-container {
+  background: #f3f4f6 !important;
+  border-radius: 0.5rem !important;
+}
+
+.psv-navbar {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0.5rem !important;
+}
+
+.psv-button {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 10px !important;
+}
+
+.psv-zoom-button {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 10px !important;
+}
+
+/* Custom Hotspot Styles */
+.custom-hotspot {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-hotspot::before {
+  content: '' !important;
+  width: 12px !important;
+  height: 12px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.custom-hotspot:hover {
+  border-color: white !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: scale(1.1) !important;
+}
