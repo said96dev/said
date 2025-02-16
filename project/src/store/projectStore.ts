@@ -50,10 +50,24 @@ export const useProjectStore = create<ProjectState>((set, get) => ({
       ...hotspotData,
       id: Math.random().toString(36).substring(2)
     };
-    
+
     set(state => ({
       projects: state.projects.map(project => {
         if (project.id === projectId) {
+          console.log(projectId)
+          console.log({
+            ...project,
+            images: project.images.map(image => {
+              if (image.id === imageId) {
+                return {
+                  ...image,
+                  hotspots: [...image.hotspots, newHotspot]
+                };
+              }
+              return image;
+            })
+          });
+
           return {
             ...project,
             images: project.images.map(image => {

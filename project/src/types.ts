@@ -16,3 +16,8 @@ export interface Hotspot {
   longitude: number;
   latitude: number;
 }
+
+export interface ViewerPosition {
+  longitude: number;
+  latitude: number;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import ImageViewer from './ImageViewer';
+import { ProjectImage } from '../types';
 
 interface ImageCardProps {
-  image: string;
+  image: ProjectImage;
   onDelete: () => void;
 }
 
@@ -17,8 +18,8 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, onDelete }) => {
       >
         <X size={16} />
       </button>
-      
-      <ImageViewer image={image} />
+       
+      <ImageViewer image={image} /> 
     </div>
   );
 };
